@@ -14,9 +14,9 @@ private:
 		if (node == NULL || !*res) return;
 
 		inorderTraversal(node->left, prevNode, res);
-        if (!prevNode) prevNode = node;
-        else *res &= prevNode->val < node->val;
-        prevNode = node;
+		if (!prevNode) prevNode = node;
+		else *res &= prevNode->val < node->val;
+		prevNode = node;
 		inorderTraversal(node->right, prevNode, res);
 	}
 public:
